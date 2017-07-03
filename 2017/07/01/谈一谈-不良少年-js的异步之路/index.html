@@ -18,11 +18,11 @@
     <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.css">
     <title>
         
-        ssss｜sanmmm&#39;s blog
+        谈一谈&#39;不良少年&#39;js的异步之路｜sanmmm&#39;s blog
         
     </title>
 
-    <link rel="canonical" href="http://haojen.github.io/2017/07/03/2017-07-03-ssss/">
+    <link rel="canonical" href="http://haojen.github.io/2017/07/01/谈一谈-不良少年-js的异步之路/">
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -137,12 +137,12 @@
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 text-center">
                 <div class="post-heading">
-                    <h1>ssss</h1>
+                    <h1>谈一谈&#39;不良少年&#39;js的异步之路</h1>
                     
                     <span class="meta">
                          作者 sanmmm
                         <span>
-                          日期 2017-07-03
+                          日期 2017-07-01
                          </span>
                     </span>
                     <div class="tags text-center">
@@ -154,7 +154,7 @@
     </div>
     <div class="post-title-haojen">
         <span>
-            ssss
+            谈一谈'不良少年'js的异步之路
         </span>
     </div>
 </header>
@@ -165,21 +165,27 @@
         <div class="row">
             <!-- Post Container -->
             <div class="col-lg-8 col-lg-offset-1 col-sm-9 post-container">
-                
+                <p>近年来,随着node.js在服务端开发中攻城掠地,js在编程语言之中越来越火热,受到的关注也越来越多,但是js这门语言因为历史原因,走了不少的弯路,有不少引发”众怒”的问题,其中,曾经困扰众多js程序员的问题”回调地狱”可以说名列前茅.</p>
+<p>说到”回调地狱”,就不得不提异步编程,js天生便有异步编程的特性,而正式借助v8引擎的高效率和js的异步事件驱动特性,node.js才得以打着异步非阻塞的旗号成为服务端开发领域中的一方诸侯,拥有众多拥趸.关于js异步的详细解释,大家可以看这篇文章: <a href="https://segmentfault.com/a/1190000004322358" target="_blank" rel="external">JavaScript：彻底理解同步、异步和事件循环(Event Loop)</a>,这里不再详述.然而,可以说”成也萧何败也萧何”,js中处理异步的逻辑代码是以回调函数的方式来”托管”的,而js单线程的特性又导致了js在处理逻辑的时候必然会造成多层嵌套的代码,从而导致代码的可读性,可维护性不可控,即”回调地狱”.</p>
+<p>在介绍了背景之后,接下来将会介绍的是社区和技术委员会为了解决这个问题所做的尝试和付出的努力.与此同时,为了更加地直观和方便理解,接下来将会以实现一个需求,并随之迭代的过程来展现js异步处理的进化之旅.</p>
+<p>1.蛮荒时代<br>    为了应对浏览器这个特殊运行条件下的需求,js采用异步+回调函数来处理诸多的异步请求.网页开发中常用的addEventListener函数便是一个典型的例子,它的第二个参数即对应监听事件的回调函数.<br>    现在,假设我们需要实现一个需求,他的内容为:(引用自<a href="http://nqdeng.github.io/7-days-nodejs/#7.1" target="_blank" rel="external">&lt;七天学会node.js&gt;</a>)</p>
+<blockquote>
+<p>我们要开发的是一个简单的静态文件合并服务器，该服务器需要支持类似以下格式的JS或CSS文件合并请求。<br><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">http://assets.example.com/foo/??bar.js,baz.js</div></pre></td></tr></table></figure></p>
+<p>在以上URL中，??是一个分隔符，之前是需要合并的多个文件的URL的公共部分，之后是使用,分隔的差异部分。因此服务器处理这个URL时，返回的是以下两个文件按顺序合并后的内容。 </p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">/foo/bar.js</div><div class="line">/foo/baz.js</div></pre></td></tr></table></figure>
+</blockquote>
+<p>2.青铜时代</p>
+<p>3.铁器时代</p>
+
                 <hr>
                 
 
                 <ul class="pager">
                     
-                    <li class="previous">
-                        <a href="/2017/07/03/my-ss/" data-toggle="tooltip" data-placement="top"
-                           title="my ss">&larr; Previous Post</a>
-                    </li>
-                    
                     
                     <li class="next">
-                        <a href="/2017/07/03/2017-07-03-essss/" data-toggle="tooltip" data-placement="top"
-                           title="essss">Next Post &rarr;</a>
+                        <a href="/2017/06/29/hello-world/" data-toggle="tooltip" data-placement="top"
+                           title="Hello World">Next Post &rarr;</a>
                     </li>
                     
                 </ul>
